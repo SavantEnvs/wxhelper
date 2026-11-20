@@ -1,0 +1,9 @@
+project: savantenvs/wxhelper
+target: fuzz-url
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-url/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/fuzz_url
+    libfuzzer: true
+    timeout: 5

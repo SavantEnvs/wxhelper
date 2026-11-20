@@ -1,0 +1,9 @@
+project: savantenvs/wxhelper
+target: fuzz-dns
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-dns/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/fuzz_dns
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/wxhelper
+target: fuzz-lz4-xml
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-lz4-xml/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/fuzz_lz4_xml
+    libfuzzer: true
+    timeout: 5

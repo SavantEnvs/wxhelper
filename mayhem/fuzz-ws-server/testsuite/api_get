@@ -1,0 +1,5 @@
+GET /api/checkLogin HTTP/1.1
+Host: x
+
+GET /other HTTP/1.1
+
